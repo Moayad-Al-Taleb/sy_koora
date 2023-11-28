@@ -1,0 +1,90 @@
+:root {
+    --bg-color: rgb(237,239,244);
+    --main-color: rgb(38,72,209) !important;
+    --second-color: rgb(255,198,198);
+    --text-color-blue: rgb(70,87,171);
+    --text-color-red: rgb(251,82,102) !important;
+    --text-color-grey: rgb(208,208,208);
+    --white-color: rgb(255, 255, 255);
+    --black-color: rgb(0, 0, 0);
+    --main-shadow: 0px 5px 7px 3px rgba(0, 0, 0, .7);
+    --main-transition: .4s all ease-in-out;
+}
+.main-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-flow: wrap;
+}
+.game-con {
+    border-radius: 20px;
+    box-shadow: var(--main-shadow);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+.game-con:nth-child(odd) {
+    background-color: var(--main-color);
+}
+.game-con:nth-child(even) {
+    background-color: var(--text-color-red);
+}
+.game-con .teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.teams-name {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.teams .team img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.teams-name .team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    color: var(--white-color);
+}
+.game-con .time {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    padding: 5px 15px;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border-radius: 20px;
+}
+.game-con .type {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 5px 15px;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border-radius: 20px;
+}

@@ -1,0 +1,104 @@
+/* start navbar  */
+:root {
+  --main-color: #b721ff;
+  --second-color: #0d85a0;
+  --black-color: #222;
+  --black-2-color: #555;
+  --white-color: #fff;
+  --grey-1-color: #eee;
+  --main-boxShadow: 0px 6px 10px 0px rgba(79, 78, 78, 1);
+}
+.sidebar.active {
+  display: none;
+}
+.sidebar {
+  background-image: linear-gradient(
+    180deg,
+    var(--second-color),
+    var(--main-color) 30% 70%,
+    var(--second-color)
+  );
+  width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar > .logo {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--white-color);
+  position: sticky;
+  top: 50px;
+  left: 0;
+}
+.sidebar .list {
+  width: 100%;
+  height: auto;
+  position: sticky;
+  top: 130px;
+  left: 0;
+}
+.list ul {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.list ul li {
+  width: 100%;
+  font-size: 1.2rem;
+}
+.list ul li .icons {
+  font-size: 2rem;
+}
+.list ul li a {
+  width: 100%;
+  padding: 10px 20px;
+  height: 100%;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list ul li a.active,
+.list ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.close-icon {
+  position: sticky;
+  top: 10px;
+  font-size: 40px;
+  color: #fff;
+  display: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.close-icon:hover {
+  background-color: var(--black-color);
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+  .sidebar .logo {
+    display: none;
+  }
+  .close-icon {
+    display: block;
+  }
+  .list > ul > li > a {
+    justify-content: center;
+  }
+  nav .list-item a span {
+    display: none;
+  }
+}
+/* end navbar */

@@ -1,0 +1,84 @@
+:root {
+  --main-color: #b721ff;
+  --second-color: #0d85a0;
+  --black-color: #222;
+  --black-2-color: #555;
+  --white-color: #fff;
+  --grey-1-color: #eee;
+  --main-boxShadow: 0px 6px 10px 0px rgba(79, 78, 78, 1);
+}
+/* start manage users page  */
+.user-column {
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.user-column:hover .image {
+  transform: scale(1.05);
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.user-ctrl {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.user-column:nth-child(even) {
+  box-shadow: 0 2px 7px var(--black-2-color);
+}
+.user-info .image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.user-info .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-column .email {
+  text-decoration: underline;
+}
+.user-btn a {
+  padding: 10px 15px;
+  color: var(--white-color);
+  text-decoration: none;
+  border-radius: 10px;
+}
+.user-btn:hover {
+  transform: translateX(5px);
+}
+.user-btn:nth-child(1) a {
+  background-color: var(--black-2-color);
+}
+.user-btn:nth-child(2) a {
+  background-color: var(--black-color);
+}
+.user-btn:nth-child(3) a {
+  background-color: var(--main-color);
+}
+
+/* end manage users page  */
+@media (max-width: 768px) {
+  .team-users {
+    width: 100%;
+  }
+  .user-column .image,
+  .user-column .email {
+    display: none;
+  }
+  .user-column {
+    width: 100%;
+    padding: 15px 10px;
+  }
+  .user-btn a {
+    padding: 7px 10px;
+  }
+}

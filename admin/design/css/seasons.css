@@ -1,0 +1,56 @@
+:root {
+  --main-color: #b721ff;
+  --main-2-color: #9921d1;
+  --second-color: #0d85a0;
+  --black-color: #222;
+  --black-2-color: #555;
+  --white-color: #fff;
+  --grey-1-color: rgb(255, 255, 255);
+  --main-boxShadow: 0px 0px 7px rgb(155, 154, 154);
+}
+.season-con {
+  width: 100%;
+}
+.season-teams-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  flex-flow: row wrap;
+}
+.season-teams .content {
+  box-shadow: var(--main-boxShadow);
+  width: 200px;
+  height: 220px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+}
+.content img {
+  object-fit: contain;
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.btns {
+  width: fit-content;
+  margin: 1rem auto;
+}
+.teams-con .control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* teams rating section  */
+
+.table-row:nth-child(1) {
+  background-color: var(--main-2-color);
+  color: var(--white-color);
+  position: relative;
+}
+
+/* teams rating section  */

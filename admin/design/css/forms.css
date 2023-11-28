@@ -1,0 +1,132 @@
+:root {
+  --main-color: #b721ff;
+  --second-color: #0d85a0;
+  --black-color: #222;
+  --black-2-color: #555;
+  --white-color: #fff;
+  --grey-1-color: #eee;
+  --main-boxShadow: 0px 5px 10px 0px rgba(79, 78, 78, 1);
+}
+.login-form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  /* transform: translateX(), translateY(); */
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(
+    90deg,
+    var(--second-color),
+    var(--main-color)
+  );
+  border-radius: 30px;
+  box-shadow: var(--main-boxShadow);
+  padding: 20px;
+  width: 420px;
+}
+.login-form h2 {
+  color: var(--white-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+form .label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--white-color);
+  margin-top: 8px;
+}
+form .input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 15px;
+  border-left: 0 solid var(--black-2-color);
+  border-right: 0 solid var(--black-2-color);
+}
+.input:focus {
+  border-left: 20px solid var(--black-2-color);
+  border-right: 20px solid var(--black-2-color);
+}
+.submit-btn {
+  padding: 5px 0;
+  border: none;
+  text-align: center;
+  margin: 20px auto 0;
+  border-radius: 15px;
+  display: block;
+  width: 120px;
+  background-color: var(--white-color);
+  color: var(--black-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.submit-btn:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+::placeholder {
+  color: #555;
+}
+/*add team section */
+.team-form {
+  margin: 1rem auto 0;
+  background-image: linear-gradient(270deg, #0d85a0 0%, #b721ff 100%);
+  width: 70%;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.user-form {
+  margin: 1rem auto 0;
+  background-image: linear-gradient(270deg, #0d85a0 0%, #b721ff 100%);
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.team-form h2 {
+  margin: 0 auto;
+  color: var(--white-color);
+}
+.team-form .field {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+.field .input-field {
+  width: 100%;
+}
+.input-img {
+  background-color: var(--white-color);
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  width: 100%;
+}
+.input-img::-webkit-file-upload-button {
+  background-color: transparent;
+  border: none;
+}
+textarea {
+  white-space: wrap;
+  resize: none;
+}
+/* add team section  */
+
+@media (max-width: 768px) {
+  .team-form {
+    margin: 10px auto;
+    width: 95%;
+  }
+  .team-form .field {
+    flex-direction: column;
+  }
+  .user-form {
+    width: 95%;
+  }
+}

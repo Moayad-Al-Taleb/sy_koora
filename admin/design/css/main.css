@@ -1,0 +1,262 @@
+/* start general things  */
+/* google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Source+Serif+4:wght@200;300;400;500;600;700;800;900&display=swap");
+/* google fonts  */
+:root {
+  --main-color: #b721ff;
+  --main-2-color: #9921d1;
+  --second-color: #0d85a0;
+  --black-color: #222;
+  --black-2-color: #555;
+  --white-color: #fff;
+  --grey-1-color: rgb(255, 255, 255);
+  --main-boxShadow: 0px 0px 7px rgb(155, 154, 154);
+}
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: all 0.3s ease-in-out;
+  font-family: "Mochiy Pop One", sans-serif;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  background-color: var(--black-color);
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    to top,
+    var(--second-color),
+    var(--main-color)
+  );
+}
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+a:hover {
+  color: var(--black-2-color);
+}
+.dash-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+body {
+  background-color: var(--white-color);
+}
+.btn-delete {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.btn-delete:hover {
+  color: var(--white-color);
+  background-color: var(--main-2-color);
+}
+.list-icon {
+  color: var(--black-color);
+  font-size: 50px;
+  cursor: pointer;
+}
+th, td {
+  vertical-align: middle;
+}
+/* main header section  */
+.heading {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading .logout-btn {
+  background-image: linear-gradient(
+    270deg,
+    var(--second-color),
+    var(--main-color)
+  );
+  padding: 7px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logout-btn .icons {
+  font-size: 1.8rem;
+}
+.logout-btn:hover {
+  transform: translateY(-5px);
+}
+.main-title {
+  padding: 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-title span {
+  border-left: 5px solid var(--main-2-color);
+  padding-left: 3px;
+}
+/* main header section  */
+
+/*panels gesign*/
+.panel {
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--black-color);
+  box-shadow: var(--main-boxShadow);
+  margin: 30px auto 0 auto;
+  width: 90%;
+}
+.panel-title {
+  font-size: 22px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.panel-content.active {
+  display: none;
+}
+/* panels design  */
+/* table section  */
+.table {
+  width: 50%;
+  margin: 1rem auto;
+}
+.peoples-table {
+  width: 70%;
+}
+@media (max-width: 768px) {
+  .table {
+    width: 95%;
+  } 
+  .peoples-table {
+    width: 100%;
+  }
+}
+/* table section  */
+
+/* messages section  */
+.handle-success-message,
+.handle-error-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  min-width: 200px;
+  padding: 0 20px;
+  height: 200px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #79ce79;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  animation: show .3s ease-in-out;
+}
+.handle-error-message {
+  background-color: #c43b3b;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.overlay {
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;position: absolute;
+  top: 0;
+  left: 0;
+}
+/* messages section  */
+
+/* cards design section  */
+.v-card {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: var(--main-boxShadow);
+}
+.v-card:hover {
+  transform: scale(1.02);
+}
+.v-card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.v-card a .image {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.v-card a .image img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+}
+.v-card a .card-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hz-card {
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 20px;
+  box-shadow: var(--main-boxShadow);
+}
+.hz-card .image {
+  flex: 1;
+  height: 100%;
+}
+.hz-card .image img {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.hz-card .card-content {
+  padding: .5rem;
+  flex: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-content h2 {
+  font-size: 1.6rem;
+}
+.card-content p {
+  opacity: .7;
+}
+.card-ctrl-date {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+.card-content span {
+  opacity: .7;
+  color: var(--bs-blue);
+}
+
+/* cards design section  */
